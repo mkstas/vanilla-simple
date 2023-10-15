@@ -15,6 +15,7 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-checker": "^0.6.2",
-    "vite-plugin-image-optimizer": "^1.1.7"
+    "vite-plugin-image-optimizer": "^1.1.7",
+    "vite-plugin-nunjucks": "^0.1.10"
   }
 }

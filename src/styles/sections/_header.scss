@@ -1,0 +1,91 @@
+.app-header {
+  border-bottom: rem(1) solid var(--color-grey-200);
+
+  &-container {
+    display: grid;
+    grid-template-areas: 'logo .' 'burger tools';
+
+    @include media-width(510) {
+      grid-template-areas: 'logo tools' 'nav .';
+    }
+
+    @include media-width(1110) {
+      grid-template-areas: 'logo nav tools';
+      grid-template-columns: auto 1fr auto;
+      max-width: rem(1110);
+      margin: 0 auto;
+    }
+
+    @include media-width(510, max) {
+      grid-template-columns: rem(50) 1fr;
+    }
+  }
+
+  &-logo {
+    grid-area: logo;
+    padding: rem(15);
+
+    @include media-width(510) {
+      padding: rem(30) rem(15);
+    }
+
+    @include media-width(510, max) {
+      grid-column: span 2;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      background-color: var(--color-white);
+      border-bottom: rem(1) solid var(--color-grey-200);
+    }
+  }
+
+  &-burger {
+    @include media-width(510) {
+      display: none;
+    }
+
+    @include media-width(510, max) {
+      grid-area: burger;
+      display: flex;
+      align-items: center;
+      padding: rem(15);
+    }
+  }
+
+  &-nav {
+    @include media-width(510) {
+      grid-area: nav;
+      grid-column: span 2;
+      padding: rem(15) rem(30);
+      border-top: rem(1) solid var(--color-grey-200);
+    }
+
+    @include media-width(1110) {
+      grid-column: initial;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      border: none;
+    }
+  }
+
+  &-tools {
+    grid-area: tools;
+    display: flex;
+    padding: rem(15);
+
+    @include media-width(510) {
+      padding: rem(15) rem(30);
+    }
+
+    @include media-width(1110) {
+      align-items: center;
+    }
+
+    @include media-width(1110, max) {
+      display: flex;
+      justify-content: end;
+    }
+  }
+}

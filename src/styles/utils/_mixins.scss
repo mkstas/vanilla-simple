@@ -1,4 +1,4 @@
-@mixin mediaWidth($value, $dir: min) {
+@mixin media-width($value, $dir: min) {
   @if ($dir == max) {
     $value: $value - 1;
   }

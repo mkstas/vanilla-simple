@@ -1,0 +1,59 @@
+.nav {
+  @include media-width(510, max) {
+    position: fixed;
+    z-index: 1;
+    top: -100%;
+    left: 0;
+    min-height: 100%;
+    width: 100%;
+    padding: rem(150) rem(15) rem(15);
+    background-color: var(--color-grey-100);
+    transition: transform 0.2s ease 0s;
+    overflow-y: auto;
+
+    &.is-active {
+      transform: translate(0, 100%);
+    }
+  }
+
+  &-list {
+    gap: rem(50);
+
+    @include media-width(510) {
+      display: flex;
+      justify-content: space-between;
+      gap: rem(15);
+    }
+
+    @include media-width(1110) {
+      gap: rem(50);
+    }
+
+    @include media-width(510, max) {
+      display: grid;
+    }
+
+    &__link {
+      font-size: rem(18);
+      color: var(--color-slate-500);
+      transition: color 0.2s ease-in 0s;
+
+      &:hover {
+        color: var(--color-violet-500);
+      }
+
+      &:active {
+        color: var(--color-violet-600);
+      }
+
+      &:focus-visible {
+        background-color: var(--color-violet-300);
+        outline: none;
+      }
+
+      @include media-width(510) {
+        font-size: rem(20);
+      }
+    }
+  }
+}

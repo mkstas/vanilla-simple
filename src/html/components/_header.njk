@@ -1,0 +1,53 @@
+<header class="app-header">
+  <div class="app-header-container">
+    <div class="app-header-logo">
+      <a class="logo logo_dark" href="/">
+        <span class="logo__circle"></span>
+        <span class="logo__text">simple</span>
+        <span class="logo__ellipse"></span>
+        <span class="logo__circle"></span>
+      </a>
+    </div>
+
+    <div class="app-header-burger">
+      <button class="burger js-burger">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+
+    <div class="app-header-nav">
+      <nav class="nav js-nav">
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Продукция</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Материалы</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">О нас</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="app-header-tools">
+      <div class="tools">
+        <div class="tools-search">
+          <button class="tools-button">
+            {% include "../icons/_search.njk" %}
+          </button>
+          <input class="tools-input" type="text" />
+        </div>
+        <button class="tools-button">
+          {% include "../icons/_log-in.njk" %}
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
