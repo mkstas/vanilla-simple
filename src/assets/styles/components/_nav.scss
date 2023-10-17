@@ -1,5 +1,5 @@
 .nav {
-  @include media-width(510, max) {
+  @include media-width(576, max) {
     position: fixed;
     z-index: 1;
     top: -100%;
@@ -19,17 +19,17 @@
   &-list {
     gap: rem(50);
 
-    @include media-width(510) {
+    @include media-width(576) {
       display: flex;
       justify-content: space-between;
       gap: rem(15);
     }
 
-    @include media-width(1110) {
+    @include media-width(1170) {
       gap: rem(50);
     }
 
-    @include media-width(510, max) {
+    @include media-width(576, max) {
       display: grid;
     }
 
@@ -51,7 +51,7 @@
         outline: none;
       }
 
-      @include media-width(510) {
+      @include media-width(576) {
         font-size: rem(20);
       }
     }

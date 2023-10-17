@@ -1,9 +1,9 @@
 .burger {
-  @include media-width(510) {
+  @include media-width(576) {
     display: none;
   }
 
-  @include media-width(510, max) {
+  @include media-width(576, max) {
     position: relative;
     z-index: 2;
     display: grid;
@@ -16,7 +16,7 @@
   &.is-active {
     & .burger__line {
       &:nth-child(1) {
-        transform: rotate(45deg) translate(#{rem(2)}, #{rem(8)});
+        transform: rotate(45deg) translate(#{rem(5)}, #{rem(5)});
       }
 
       &:nth-child(2) {
@@ -24,13 +24,13 @@
       }
 
       &:nth-child(3) {
-        transform: rotate(-45deg) translate(#{rem(2)}, #{rem(-8)});
+        transform: rotate(-45deg) translate(#{rem(5)}, #{rem(-5)});
       }
     }
   }
 
   &__line {
-    @include media-width(510, max) {
+    @include media-width(576, max) {
       display: block;
       width: 100%;
       height: rem(2);

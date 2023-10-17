@@ -5,21 +5,21 @@
     display: grid;
     grid-template-areas: 'logo .' 'burger tools';
 
-    @include media-width(510) {
+    @include media-width(576) {
       grid-template-areas: 'logo tools' 'nav .';
     }
 
-    @include media-width(1110) {
+    @include media-width(1170) {
       grid-template-areas: 'logo nav tools';
       grid-template-columns: auto 1fr auto;
       align-items: center;
       gap: rem(60);
-      max-width: rem(1110 + 60);
+      max-width: rem(1170 + 60);
       padding: rem(27) rem(30);
       margin: 0 auto;
     }
 
-    @include media-width(510, max) {
+    @include media-width(576, max) {
       grid-template-columns: rem(50) 1fr;
     }
   }
@@ -27,13 +27,13 @@
   &-logo {
     grid-area: logo;
 
-    @include media-width(1110, max) {
+    @include media-width(1170, max) {
       display: flex;
       justify-content: flex-start;
       padding: rem(15) rem(30);
     }
 
-    @include media-width(510, max) {
+    @include media-width(576, max) {
       grid-column: span 2;
       position: relative;
       z-index: 2;
@@ -44,11 +44,11 @@
   }
 
   &-burger {
-    @include media-width(510) {
+    @include media-width(576) {
       display: none;
     }
 
-    @include media-width(510, max) {
+    @include media-width(576, max) {
       grid-area: burger;
       display: flex;
       align-items: center;
@@ -57,14 +57,14 @@
   }
 
   &-nav {
-    @include media-width(510) {
+    @include media-width(576) {
       grid-area: nav;
       grid-column: span 2;
       padding: rem(15) rem(30);
       border-top: rem(1) solid var(--color-grey-200);
     }
 
-    @include media-width(1110) {
+    @include media-width(1170) {
       grid-column: initial;
       display: flex;
       align-items: center;
@@ -78,17 +78,17 @@
     grid-area: tools;
     display: flex;
 
-    @include media-width(1110) {
+    @include media-width(1170) {
       align-items: center;
     }
 
-    @include media-width(1110, max) {
+    @include media-width(1170, max) {
       display: flex;
       justify-content: end;
       padding: rem(15) rem(30);
     }
 
-    @include media-width(510, max) {
+    @include media-width(576, max) {
       padding: rem(15);
     }
   }

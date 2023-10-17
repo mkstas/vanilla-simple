@@ -2,7 +2,7 @@
   margin: 0 auto;
   padding: 0 rem(15);
 
-  @include media-width(510) {
+  @include media-width(576) {
     max-width: rem(1110 + 60);
     padding: 0 rem(30);
   }

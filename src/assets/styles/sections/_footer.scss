@@ -4,7 +4,7 @@
   &__row {
     padding: rem(20) 0;
 
-    @include media-width(510) {
+    @include media-width(576) {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -13,7 +13,7 @@
   }
 
   &__logo {
-    @include media-width(510, max) {
+    @include media-width(576, max) {
       display: flex;
       justify-content: center;
       padding: 0 0 rem(20);
@@ -26,7 +26,7 @@
     justify-content: center;
     gap: rem(30);
 
-    @include media-width(510, max) {
+    @include media-width(576, max) {
       padding: rem(20) 0 0;
     }
   }
