@@ -12,7 +12,9 @@
   <body>
     <div class="app">
       {% include "./src/html/components/_header.njk" %}
-      <main></main>
+      <main class="app-main">
+        {% include "./src/html/components/_intro.njk" %}
+      </main>
       {% include "./src/html/components/_footer.njk" %}
     </div>
     <script type="module" src="/src/assets/scripts/index.ts"></script>

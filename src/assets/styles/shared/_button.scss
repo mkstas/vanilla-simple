@@ -1,0 +1,30 @@
+.button {
+  padding: rem(18) rem(60);
+  border: rem(1) solid var(--color-violet-500);
+  background-color: var(--color-white);
+  font-size: rem(18);
+  color: var(--color-violet-500);
+  outline: none;
+  transition: background-color 0.2s ease-in 0s, color 0.2s ease-in 0s,
+    border-color 0.2s ease-in 0s;
+
+  @include media-width(768) {
+    padding: rem(22) rem(88);
+    font-size: rem(20);
+  }
+
+  &:hover {
+    background-color: var(--color-violet-500);
+    color: var(--color-white);
+  }
+
+  &:active {
+    background-color: var(--color-violet-600);
+    color: var(--color-white);
+    border-color: var(--color-violet-600);
+  }
+
+  &:focus-visible {
+    background-color: var(--color-violet-300);
+  }
+}
