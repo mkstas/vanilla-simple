@@ -1,0 +1,90 @@
+.stages {
+  &-list {
+    display: grid;
+    gap: rem(20);
+
+    @include media-width(576) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item {
+      display: grid;
+      gap: rem(5);
+      padding: rem(20) 0 0;
+      border-top: rem(1) solid var(--color-grey-300);
+
+      @include media-width(576, max) {
+        grid-template-columns: rem(130) 1fr;
+        align-items: center;
+        gap: rem(30);
+      }
+
+      @include media-width(1170) {
+        grid-template-columns: rem(160) 1fr;
+        align-items: center;
+        gap: rem(30);
+      }
+    }
+
+    &__image {
+      width: 100%;
+      max-width: rem(160);
+      object-fit: contain;
+    }
+
+    &__title {
+      font-size: rem(16);
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--color-slate-400);
+
+      @include media-width(768) {
+        font-size: rem(18);
+      }
+    }
+
+    &__text {
+      font-size: rem(16);
+      line-height: 1.5;
+    }
+  }
+
+  &-content {
+    margin: rem(60) 0 0;
+
+    @include media-width(768) {
+      display: grid;
+      grid-template-columns: calc(330 / 690 * 100%) 1fr;
+      gap: rem(30);
+    }
+
+    @include media-width(1170) {
+      grid-template-columns: calc(730 / 1110 * 100%) 1fr;
+      margin: rem(90) 0 0;
+    }
+
+    &__image {
+      width: 100%;
+
+      @include media-width(768, max) {
+        max-width: rem(330);
+      }
+    }
+
+    &__title {
+      margin: rem(20) 0 0;
+    }
+
+    &__text {
+      display: grid;
+      gap: rem(10);
+      margin: rem(20) 0 0;
+      font-size: rem(16);
+      line-height: 1.7;
+
+      @include media-width(768) {
+        font-size: rem(18);
+      }
+    }
+  }
+}
