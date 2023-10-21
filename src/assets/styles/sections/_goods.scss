@@ -20,6 +20,8 @@
   &-card {
     &__image {
       width: 100%;
+      height: rem(180);
+      object-fit: cover;
     }
 
     &__title {
