@@ -1,0 +1,34 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(5);
+  font-size: rem(20);
+  color: var(--color-violet-500);
+  transition: color 0.2s ease-in 0s;
+
+  &:hover {
+    color: var(--color-violet-600);
+
+    & svg {
+      fill: var(--color-violet-600);
+    }
+  }
+
+  &:active {
+    color: var(--color-violet-600);
+
+    & svg {
+      fill: var(--color-violet-600);
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: var(--color-violet-300);
+  }
+
+  & svg {
+    fill: var(--color-violet-500);
+    transition: fill 0.2s ease-in 0s;
+  }
+}
