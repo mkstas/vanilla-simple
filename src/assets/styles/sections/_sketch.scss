@@ -1,0 +1,50 @@
+.sketch {
+  position: relative;
+  z-index: 1;
+
+  &-container {
+    display: grid;
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+
+    @include media-width(768) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(30);
+    }
+
+    @include media-width(1170) {
+      grid-template-columns: rem(350) 1fr;
+      padding-top: rem(120);
+      padding-bottom: 0;
+    }
+  }
+
+  &-content {
+    @include media-width(768, max) {
+      order: 2;
+    }
+
+    &__text {
+      margin: rem(20) 0 0;
+      font-size: rem(16);
+      line-height: 1.7;
+
+      @include media-width(768) {
+        font-size: rem(18);
+      }
+    }
+
+    &__button {
+      margin: rem(30) 0 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    margin: 0 0 rem(-140);
+
+    @include media-width(768, max) {
+      order: 1;
+    }
+  }
+}
