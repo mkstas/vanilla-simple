@@ -1,6 +1,5 @@
 .sketch {
-  position: relative;
-  z-index: 1;
+  overflow: hidden;
 
   &-container {
     display: grid;
@@ -41,7 +40,10 @@
 
   &__image {
     width: 100%;
-    margin: 0 0 rem(-140);
+
+    @include media-width(1170) {
+      margin: 0 0 rem(-140);
+    }
 
     @include media-width(768, max) {
       order: 1;

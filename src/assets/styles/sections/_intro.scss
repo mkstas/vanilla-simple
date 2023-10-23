@@ -51,11 +51,11 @@
 
     &__text {
       margin: rem(20) 0 0;
+      line-height: 1.5;
 
       @include media-width(768) {
         margin: rem(30) 0 0;
         font-size: rem(18);
-        line-height: 1.5;
       }
     }
 
